@@ -12,9 +12,10 @@ def main():
         print("VIRTUAL_ENV is not set.")
         sys.exit(1)
 
-    for dn in os.listdir(os.path.join(venv, "include")):
-        if dn.startswith("python"):
-            break
+    if os.path.exists(os.path.join(venv, "include")):
+        for dn in os.listdir(os.path.join(venv, "include")):
+            if dn.startswith("python"):
+                break
 
     target = os.path.join(venv, "include", dn)
 
