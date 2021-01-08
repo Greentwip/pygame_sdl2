@@ -17,7 +17,7 @@ def main():
             if dn.startswith("python"):
                 break
 
-    target = os.path.join(venv, "include", dn)
+    target = os.path.join(venv, "include")
 
     try:
         source = os.readlink(target)
