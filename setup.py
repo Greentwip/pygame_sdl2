@@ -31,7 +31,6 @@ import platform
 import shutil
 import sys
 
-
 def setup_env(name):
     # If PYGAME_SDL2_CC or PYGAME_SDL2_LD are in the environment, and CC or LD are not, use them.
 
