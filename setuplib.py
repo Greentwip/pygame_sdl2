@@ -63,12 +63,15 @@ if windows:
 else:
     cython_command = "cython"
 
-if sys.version_info[0] >= 3:
-    version_flag = "-3"
-    gen = "gen3"
-else:
-    version_flag = "-2"
-    gen = "gen"
+#if sys.version_info[0] >= 3:
+#    version_flag = "-3"
+#    gen = "gen3"
+#else:
+#    version_flag = "-2"
+#    gen = "gen"
+
+version_flag = "-3"
+gen = "gen3"
 
 if static:
     gen = gen + "-static"
