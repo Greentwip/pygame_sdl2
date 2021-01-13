@@ -3,6 +3,6 @@
 set -e
 
 export CC="ccache gcc"
-python setup.py -q install
+python setup.py install  --old-and-unmanageable
 
-exec python "$@"
+#exec python "$@"
