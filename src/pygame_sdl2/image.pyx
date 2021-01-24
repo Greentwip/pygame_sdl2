@@ -136,14 +136,14 @@ def save(Surface surface not None, filename, compression=-1):
     cdef SDL_RWops *rwops
     cdef int compression_level = compression
 
-    if ext == b'.PNG':
+    if ext == '.PNG':
         with nogil:
             err = Pygame_SDL2_SavePNG(fn, surface.surface, compression_level)
-    elif ext == b'.BMP':
+    elif ext == '.BMP':
         rwops = to_rwops(filename, "wb")
         with nogil:
             err = SDL_SaveBMP_RW(surface.surface, rwops, 1)
-    elif ext == b".JPG" or ext == b".JPEG":
+    elif ext == ".JPG" or ext == ".JPEG":
         with nogil:
             err = Pygame_SDL2_SaveJPEG(surface.surface, fn, compression_level)
     else:
